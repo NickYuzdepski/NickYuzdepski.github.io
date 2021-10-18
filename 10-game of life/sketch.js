@@ -1,8 +1,9 @@
 // Game of Life  
 
 let grid;
-let gridSize = 40;
+let gridSize = 60;
 let cellWidth, cellHeight;
+let autoplay = false;
 
 
 function setup() {
@@ -28,7 +29,7 @@ function keyPressed(){
     nextTurn();
   }
   if (key === "p") {
-    
+    autoplay = !autoplay;
   }
 }
 
