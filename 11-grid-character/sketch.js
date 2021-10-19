@@ -45,24 +45,7 @@ function keyPressed(){
 
 
 function tryToMoveTo(newX, newY) {
-  //make sure your not off the grid
-  if (newX >= 0 && newY >= 0 && newX < gridSize && newY < gridsize) {
-    if (grid[newY][newX] === 0) {//if new spot is empty
-
-    }
-  }
-  if (grid[newY][newX] === 0) { //if new spot is empty
-
- 
-    //reset current player spot to empty
-    grid[playerY][playerX] = 0;
-  }
-  playerX = newX;
-  
-  playerY = newY;
-
-  //set new player spot to red
-  grid[playerY][playerX] = 9;
+  grid[newY][newX] = 9;
 }
 
 function nextTurn() {
