@@ -2,7 +2,7 @@
 // Nicklas Yuzdepski
 // October 20, 2021
 
-let gridSize = 100;
+let gridSize = 9;
 let grid;
 
 function setup() {
@@ -11,6 +11,17 @@ function setup() {
 
 function draw() {
   background(220);
+  displayGrid();
 
   rect(mouseX, mouseY, 100, 50);
 }
+
+
+displayGrid() {
+  
+}
+
+
+
+
+
