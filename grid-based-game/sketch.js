@@ -2,8 +2,12 @@
 // Nicklas Yuzdepski
 // October 20, 2021
 
-let gridSize = 9;
+let gridSize = 10;
 let grid;
+let gridCharacterY;
+let gridCharacterX;
+let positionY = random;
+let positionX = random;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -14,7 +18,7 @@ function draw() {
   background(220);
 
 }
-
+// create empty 2D array
 function createEmpty2DArray(rows, cols) {
   let grid = [];
   for (let y=0; y<rows; y++) {
@@ -25,6 +29,15 @@ function createEmpty2DArray(rows, cols) {
   }
   return grid;
 }
+
+// put character in grid
+grid[gridCharacterY][gridCharacterX] = random(positionY, positionX);
+
+fill("red");
+  
+
+
+
 
 
 
