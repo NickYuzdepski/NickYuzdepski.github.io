@@ -7,19 +7,25 @@ let grid;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  grid = createEmpty2DArray(gridSize, gridSize);
 }
 
 function draw() {
   background(220);
-  displayGrid();
 
-  rect(mouseX, mouseY, 100, 50);
 }
 
-
-displayGrid() {
-  
+function createEmpty2DArray(rows, cols) {
+  let grid = [];
+  for (let y=0; y<rows; y++) {
+    grid.push([]);
+    for (let x=0; x<cols; x++) {
+      grid[y].push(0);
+    }
+  }
+  return grid;
 }
+
 
 
 
