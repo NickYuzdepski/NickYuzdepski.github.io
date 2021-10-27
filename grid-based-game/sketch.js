@@ -7,8 +7,8 @@ let gridSize = 10;
 let grid;
 let gridCharacterY;
 let gridCharacterX;
-let positionY = random(0, 400);
-let positionX = random(0, 400);
+let positionY = random(400);
+let positionX = random(400);
 let gridObstacle;
 
 function setup() {
@@ -20,6 +20,7 @@ function draw() {
   background("white");
 
 }
+
 // create empty 2D array
 function createEmpty2DArray(rows, cols) {
   let grid = [];
@@ -38,6 +39,20 @@ function displayGrid() {
     for (let x = 0; x < gridSize; x++) {
       fill("white");
     }
+  }
+}
+
+function mousePressed() {
+  let cellWidth = width/gridSize;
+  let cellHeight = height/gridSize;
+  let cellX = Math.floor(mouseX/cellWidth);
+  let cellY = Math.floor(mouseY/cellHeight);
+
+  if (grid[cellY][cellX] === 1) {
+    grid [cellY][cellX] = 0;
+  }
+  else if (grid[cellY][cellX] === 0) {
+    grid[cellY][cellX] = 1;
   }
 }
 
