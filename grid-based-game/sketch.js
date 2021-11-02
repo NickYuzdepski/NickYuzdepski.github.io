@@ -6,7 +6,6 @@ let gridSize = 10;
 let grid;
 
 function setup() {
-  grid = imageMode(CENTER);
   createCanvas(400, 400);
   grid = createEmpty2DArray(gridSize, gridSize);
 }
