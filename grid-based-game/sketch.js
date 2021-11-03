@@ -4,15 +4,22 @@
 
 let gridSize = 10;
 let grid;
+let x;
+let y;
+let playerX = 0;
+let playerY = 0;
+
 
 function setup() {
   createCanvas(400, 400);
   grid = createEmpty2DArray(gridSize, gridSize);
+
 }
 
 function draw() {
   background(220);
   displayGrid();
+
 }
 
 //use mouse to draw on grid
@@ -59,6 +66,14 @@ function createEmpty2DArray(rows, cols) {
   }
   return grid;
 }
+
+function moveCircle(circleX, circleY)
+//edge boundary
+  if (circleX >= 0 && circleY && circleX >= gridsize && circleY >= gridsize) {
+    if (grid [circleX][circleY] === 0) {
+
+    }
+  }
 
 
 
