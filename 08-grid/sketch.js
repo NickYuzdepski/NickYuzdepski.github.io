@@ -45,7 +45,6 @@ function displayGrid() {
     
 }
 
-
 function createEmpty2DArray(rows, cols) {
   let grid = [];
   for (let y=0; y<rows; y++) {
