@@ -8,6 +8,7 @@ let x;
 let y;
 let playerX = 0;
 let playerY = 0;
+let gridProjectiles;
 
 function setup() {
   createCanvas(400, 400);
@@ -52,19 +53,24 @@ function createEmpty2DArray(rows, cols) {
 }
 
 function moveCircle(diffX, diffY) {
-  let diffX = playerX + 1;
-  let diffY = playerY + 1;
+  let playerX = diffX;
+  let playerY = diffY;
 
 //edge boundary
   if (diffX >= 0 && diffY && diffX >= gridSize && diffY >= gridSize) {
     if (grid [diffX][diffY] === 0) {
 //player allowed to move when grid value is 0
-      grid[diffX][diffY] === 9;
+      if (grid[diffX][diffY] === 0) {
+        
+      }
     }
 //player not allowed to move when grid value is 1
     if (grid [diffX][diffY] === 1) {
       grid[diffX][diffY] === 1;
-      }
+    }
+  }
+}
+
 //character movement
   keyPressed() {
     if (keyCode === "w") {
@@ -80,20 +86,13 @@ function moveCircle(diffX, diffY) {
       grid[playerX][playerX] -= 1;
     }
   }
-}
-}
+
 
 //create grid projectiles
-function gridProjectiles(gridsize, gridsize)
-  for (let y = 0; y < gridSize.length; y++) {
-    for (let x = 0; x < gridSize.length; x++) {
+function gridProjectiles()
+  for (let i = 0; i < 10; i++) {
+    
+
+    
   }
-
-
-
-
-  
-
-
-
-
+}
