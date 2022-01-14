@@ -30,19 +30,19 @@ function sierpinski(points, degree) {
   if (degree > 0) {
     //pattern
     sierpinski([points[0],
-                getMidpoint(points[0], points[1]),
-                getMidpoint(points[0], points[2])],
-                degree - 1);
+      getMidpoint(points[0], points[1]),
+      getMidpoint(points[0], points[2])],
+    degree - 1);
 
     sierpinski([points[1],
-                  getMidpoint(points[0], points[1]),
-                  getMidpoint(points[1], points[2])],
-                  degree - 1);
+      getMidpoint(points[0], points[1]),
+      getMidpoint(points[1], points[2])],
+    degree - 1);
 
     sierpinski([points[2],
-                  getMidpoint(points[0], points[2]),
-                  getMidpoint(points[1], points[2])],
-                  degree - 1);
+      getMidpoint(points[0], points[2]),
+      getMidpoint(points[1], points[2])],
+    degree - 1);
 
   }
 }
